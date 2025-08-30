@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meme Credit Union</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Meme Credit Union, a meme coin lending platform on Solana." />
+  <link rel="icon" href="https://i.postimg.cc/0zYPP1Ww/0zu-Vu48-D-400x400.jpg" />
+  <style>
+    body { font-family: 'Comic Sans MS', cursive, sans-serif; }
+    .truncate-middle { max-width: 100%; display: inline-block; }
+  </style>
+</head>
+<body class="bg-white text-purple-800">
+  <!-- Top Bar: Contract + Copy + View -->
+  <div class="w-full flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 py-2 px-3 bg-purple-800 text-white">
+    <p class="text-[13px]">Contract Address:
+      <span id="contractAddress" class="font-mono">GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump</span>
+    </p>
+    <div class="flex items-center gap-2">
+      <button id="copyButton" class="bg-white text-purple-800 px-2 py-0.5 rounded text-[13px] font-semibold hover:bg-gray-200">Copy</button>
+      <a id="viewOnSolscan" class="text-[13px] underline hover:no-underline" target="_blank" rel="noreferrer"
+        href="https://solscan.io/token/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump">
+        View on Solscan
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white text-purple-800 p-4 sticky top-0 shadow-md z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold flex items-center">
+        <img src="https://i.postimg.cc/0zYPP1Ww/0zu-Vu48-D-400x400.jpg" alt="Meme Credit Union Logo" class="w-10 h-10 mr-2 rounded-full"/>
+        Meme Credit Union
+      </h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-purple-500">Home</a></li>
+        <li><a href="#about" class="hover:text-purple-500">About</a></li>
+        <li><a href="#features" class="hover:text-purple-500">Features</a></li>
+        <li><a href="#how-it-works" class="hover:text-purple-500">How It Works</a></li>
+        <li><a href="#links" class="hover:text-purple-500">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="bg-white text-purple-800 py-16 relative overflow-hidden">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-5xl font-bold mb-4">Welcome to Meme Credit Union</h2>
+      <p class="text-2xl mb-6">The dankest lending and borrowing platform for meme coins.</p>
+      <p class="text-lg mb-8">Lend your Pengu, borrow some Popcat – all in one meme-tastic place!</p>
+      <a href="#features" class="bg-purple-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-600 shadow-lg">Get Meme'd Up</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-bold mb-6">About Us</h2>
+      <p class="text-lg text-purple-700 max-w-3xl mx-auto mb-8">
+        Meme Credit Union is the ultimate platform for meme enthusiasts to lend and borrow their favorite meme coins. Whether you're HODLing or looking to leverage, we've got the tools to help your portfolio go to the moon!
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-2">Meme Powered</h3>
+          <p class="text-purple-700">Backed by the power of internet culture and blockchain tech.</p>
+        </div>
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-2">Secure & Fun</h3>
+          <p class="text-purple-700">Top notch security with a side of laughs.</p>
+        </div>
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-2">Community Driven</h3>
+          <p class="text-purple-700">Join the meme army and shape the future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-bold mb-6">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Lending Icon" class="mx-auto mb-4 w-24 h-24"/>
+          <h3 class="text-2xl font-bold mb-2">Lending</h3>
+          <p class="text-purple-700">Earn interest on your meme coins by lending them out.</p>
+        </div>
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Borrowing Icon" class="mx-auto mb-4 w-24 h-24"/>
+          <h3 class="text-2xl font-bold mb-2">Borrowing</h3>
+          <p class="text-purple-700">Borrow meme coins with competitive rates.</p>
+        </div>
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Security Icon" class="mx-auto mb-4 w-24 h-24"/>
+          <h3 class="text-2xl font-bold mb-2">Security</h3>
+          <p class="text-purple-700">Multi sig wallets and audits for peace of mind.</p>
+        </div>
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Analytics Icon" class="mx-auto mb-4 w-24 h-24"/>
+          <h3 class="text-2xl font-bold mb-2">Analytics</h3>
+          <p class="text-purple-700">Track your memes with real time dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-bold mb-6">How It Works</h2>
+      <ol class="text-lg text-purple-700 max-w-3xl mx-auto list-decimal list-inside space-y-4">
+        <li>Deposit your meme coins into the union.</li>
+        <li>Choose to lend or borrow based on your vibe.</li>
+        <li>Track PnL and health with our dashboard.</li>
+        <li>Withdraw anytime (blockchain fees apply).</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section id="links" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-6">Our Links</h2>
+      <p class="text-lg text-purple-700 text-center max-w-3xl mx-auto mb-8">
+        Join our meme tastic community and snipe meme tokens faster. Follow us and trade $MCU on top DEXes with smart money insights.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <a href="https://x.com/memecreditunion" target="_blank" class="flex items-center justify-center bg-purple-50 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="Follow us on X" class="w-8 h-8 mr-2"/>
+          <span>Follow us on X</span>
+        </a>
+        <a href="https://t.me/memecreditunion" target="_blank" class="flex items-center justify-center bg-purple-50 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://telegram.org/img/t_logo.svg" alt="Join our Telegram" class="w-8 h-8 mr-2"/>
+          <span>Join our Telegram</span>
+        </a>
+        <a href="https://gmgn.ai/sol/token/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="flex items-center justify-center bg-purple-50 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://i.postimg.cc/9DDwpppM/gmgn.png" alt="Trade on GMGN" class="w-8 h-8 mr-2"/>
+          <span>Trade on GMGN</span>
+        </a>
+        <a href="https://jup.ag/tokens/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="flex items-center justify-center bg-purple-50 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://jup.ag/favicon.ico" alt="Trade on Jupiter" class="w-8 h-8 mr-2"/>
+          <span>Trade on Jupiter</span>
+        </a>
+        <a href="https://pump.fun/coin/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="flex items-center justify-center bg-purple-50 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://i.postimg.cc/WFV1Z6zh/Pump-fun-logo.png" alt="Trade on Pump.fun" class="w-8 h-8 mr-2"/>
+          <span>Trade on Pump.fun</span>
+        </a>
+        <a href="https://dexscreener.com/solana/5bfaeaj3bx1ezzxkxinjqma5cashwgufknfyryoxpbez" target="_blank" class="flex items-center justify-center bg-purple-50 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="https://dexscreener.com/favicon.ico" alt="Trade on DexScreener" class="w-8 h-8 mr-2"/>
+          <span>Trade on DexScreener</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-purple-800 py-6 text-center border-t">
+    <p>© 2025 Meme Credit Union. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Smooth scrolling for internal links only
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Copy contract address to clipboard
+    const copyBtn = document.getElementById('copyButton');
+    copyBtn?.addEventListener('click', function () {
+      const contractAddress = document.getElementById('contractAddress').textContent.trim();
+      navigator.clipboard.writeText(contractAddress).then(() => {
+        copyBtn.textContent = 'Copied';
+        setTimeout(() => copyBtn.textContent = 'Copy', 2000);
+      }).catch(() => {
+        copyBtn.textContent = 'Error';
+        setTimeout(() => copyBtn.textContent = 'Copy', 2000);
+      });
+    });
+  </script>
+</body>
+</html>
