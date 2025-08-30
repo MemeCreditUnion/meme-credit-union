@@ -1,0 +1,31 @@
+/* Meme Credit Union — Site Styles (extracted from inline) */
+:root {
+  /* You can add brand colors or variables here later */
+}
+
+/* Typography */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #4c1d95; /* Tailwind's purple-900-ish as a fallback when Tailwind isn't loaded */
+  background: #ffffff;
+}
+
+/* Utilities (optional fallbacks; Tailwind still does most of the work) */
+.truncate-middle {
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* Top bar tweaks (optional if Tailwind is present) */
+.topbar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons (light touch; Tailwind handles main styles) */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
