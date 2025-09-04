@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,9 +15,11 @@
 </head>
 <body class="bg-white text-purple-800">
     <!-- Contract Address with Copy Button -->
-    <div class="bg-purple-800 text-center inline-block mx-auto py-1 px-3 my-2 rounded">
-        <p class="text-[13px] text-white inline">Contract Address: <span id="contractAddress">GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump</span></p>
-        <button id="copyButton" class="bg-white text-purple-800 px-2 py-0.5 ml-2 rounded text-[13px] font-semibold hover:bg-gray-200">Copy</button>
+    <div class="bg-purple-800 py-2 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-[13px] text-white mb-1">Contract Address: <span id="contractAddress">GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump</span></p>
+            <button id="copyButton" class="bg-white text-purple-800 px-3 py-1 rounded-full text-[13px] font-semibold hover:bg-purple-100 shadow-lg">Copy Address</button>
+        </div>
     </div>
 
     <!-- Navigation Bar -->
@@ -80,8 +43,8 @@
     <section id="home" class="bg-white text-purple-800 py-20 relative overflow-hidden">
         <div class="container mx-auto text-center px-4">
             <h2 class="text-5xl font-bold mb-4 animate-bounce">Welcome to Meme Credit Union!</h2>
-            <p class="text-2xl mb-6">The dankest lending and borrowing platform for meme coins. 🚀💰</p>
-            <p class="text-lg mb-8">Lend your Pengu, borrow some Popcat – all in one meme-tastic place!</p>
+            <p class="text-2xl mb-6">The dankest lending and borrowing platform for meme coins.</p>
+            <p class="text-lg mb-8">Lend your Pengu, borrow some Popcat all in one meme tastic place!</p>
             <a href="#features" class="bg-purple-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-600 shadow-lg">Get Meme'd Up</a>
         </div>
         <!-- Meme Background Elements -->
@@ -101,11 +64,11 @@
             <h2 class="text-4xl font-bold mb-6 text-purple-800">About Us</h2>
             <p class="text-lg text-purple-700 max-w-3xl mx-auto mb-8">
                 Meme Credit Union is the ultimate platform for meme enthusiasts to lend and borrow their favorite meme coins. 
-                Whether you're HODLing or looking to leverage, we've got the tools to make your portfolio go to the moon! 🌕
+                Whether you're HODLing or looking to leverage, we've got the tools to make your portfolio go to the moon!
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-purple-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-2 text-purple-800">Meme-Powered</h3>
+                    <h3 class="text-2xl font-bold mb-2 text-purple-800">Meme Powered</h3>
                     <p class="text-purple-700">Backed by the power of internet culture and blockchain tech.</p>
                 </div>
                 <div class="bg-purple-50 p-6 rounded-lg shadow-md">
@@ -154,7 +117,7 @@
         <div class="container mx-auto text-center px-4">
             <h2 class="text-4xl font-bold mb-6 text-purple-800">How It Works</h2>
             <ol class="text-lg text-purple-700 max-w-3xl mx-auto list-decimal list-inside space-y-4">
-                <li>Sign up with your wallet – easy peasy!</li>
+                <li>Sign up with your wallet easy peasy!</li>
                 <li>Deposit your meme coins into the union.</li>
                 <li>Choose to lend or borrow based on your vibe.</li>
                 <li>Watch your portfolio grow with interest or leverage.</li>
@@ -168,7 +131,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-6 text-purple-800">Our Links</h2>
             <p class="text-lg text-purple-700 text-center max-w-3xl mx-auto mb-8">
-                Join our meme-tastic community and snipe meme tokens faster! Follow us and trade $MCU on top DEXes with smart money insights. 🚀
+                Join our meme tastic community and snipe meme tokens faster! Follow us and trade $MCU on top DEXes with smart money insights.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <!-- X -->
@@ -228,13 +191,13 @@
             navigator.clipboard.writeText(contractAddress).then(() => {
                 this.textContent = 'Copied!';
                 setTimeout(() => {
-                    this.textContent = 'Copy';
+                    this.textContent = 'Copy Address';
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy: ', err);
                 this.textContent = 'Error';
                 setTimeout(() => {
-                    this.textContent = 'Copy';
+                    this.textContent = 'Copy Address';
                 }, 2000);
             });
         });

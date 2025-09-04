@@ -1,31 +1,250 @@
-/* Meme Credit Union — Site Styles (extracted from inline) */
-:root {
-  /* You can add brand colors or variables here later */
-}
-
-/* Typography */
+<!DOCTYPE html>
+<html lang="en">
+/* Custom styles from <style> tag */
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: #4c1d95; /* Tailwind's purple-900-ish as a fallback when Tailwind isn't loaded */
-  background: #ffffff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #6b21a8; /* Purple text */
 }
 
-/* Utilities (optional fallbacks; Tailwind still does most of the work) */
-.truncate-middle {
-  max-width: 100%;
-  display: inline-block;
+/* Inline style for Pengu GIF container */
+.pengu-gif-container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
 }
 
-/* Top bar tweaks (optional if Tailwind is present) */
-.topbar {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
+/* Key Tailwind classes translated to CSS (not exhaustive, highlights major styles) */
+
+/* Contract Address Section */
+.contract-section {
+    background-color: #6b21a8; /* bg-purple-800 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+.contract-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem;
+    max-width: 1280px; /* container */
+}
+.contract-text {
+    font-size: 13px; /* text-[13px] */
+    color: #ffffff; /* text-white */
+    margin-bottom: 0.25rem; /* mb-1 */
+}
+.copy-button {
+    background-color: #ffffff; /* bg-white */
+    color: #6b21a8; /* text-purple-800 */
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem;
+    padding-top: 0.25rem; /* py-1 */
+    padding-bottom: 0.25rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+.copy-button:hover {
+    background-color: #f3e8ff; /* hover:bg-purple-100 */
 }
 
-/* Buttons (light touch; Tailwind handles main styles) */
-button[disabled] {
-  opacity: 0.6;
-  cursor: not-allowed;
+/* Navigation Bar */
+.nav {
+    background-color: #ffffff; /* bg-white */
+    color: #6b21a8; /* text-purple-800 */
+    padding: 1rem; /* p-4 */
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    z-index: 10;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem;
+    max-width: 1280px; /* container */
+}
+.nav-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    display: flex;
+    align-items: center;
+}
+.nav-logo {
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    margin-right: 0.5rem; /* mr-2 */
+    border-radius: 9999px; /* rounded-full */
+}
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* space-x-6 */
+}
+.nav-links a:hover {
+    color: #a78bfa; /* hover:text-purple-500 */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffffff; /* bg-white */
+    color: #6b21a8; /* text-purple-800 */
+    padding-top: 5rem; /* py-20 */
+    padding-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+.hero-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem;
+    max-width: 1280px; /* container */
+}
+.hero-title {
+    font-size: 3rem; /* text-5xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+    animation: bounce 1s infinite; /* animate-bounce */
+}
+.hero-subtitle {
+    font-size: 1.5rem; /* text-2xl */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+.hero-text {
+    font-size: 1.125rem; /* text-lg */
+    margin-bottom: 2rem; /* mb-8 */
+}
+.hero-button {
+    background-color: #6b21a8; /* bg-purple-800 */
+    color: #ffffff; /* text-white */
+    padding-left: 2rem; /* px-8 */
+    padding-right: 2rem;
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+.hero-button:hover {
+    background-color: #7e22ce; /* hover:bg-purple-600 */
+}
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* w-full */
+    height: 100%; /* h-full */
+    opacity: 0.1; /* opacity-10 */
+    pointer-events: none;
+}
+.popcat-gif {
+    position: absolute;
+    bottom: 5rem; /* bottom-20 */
+    right: 5rem; /* right-20 */
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* animate-pulse */
+}
+
+/* About, Features, How It Works, Links, Footer sections */
+.section {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem;
+    background-color: #ffffff; /* bg-white */
+}
+.section-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1.5rem; /* mb-6 */
+    color: #6b21a8; /* text-purple-800 */
+}
+.section-text {
+    font-size: 1.125rem; /* text-lg */
+    color: #7e22ce; /* text-purple-700 */
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem; /* mb-8 */
+}
+.grid {
+    display: grid;
+    gap: 2rem; /* gap-8 */
+}
+@media (min-width: 768px) {
+    .grid-cols-md-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+.card {
+    background-color: #faf5ff; /* bg-purple-50 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+.card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* hover:shadow-xl */
+    transition: box-shadow 0.3s ease-in-out; /* transition-shadow */
+}
+.card-image {
+    width: 6rem; /* w-24 */
+    height: 6rem; /* h-24 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; /* mb-4 */
+}
+.card-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 0.5rem; /* mb-2 */
+    color: #6b21a8; /* text-purple-800 */
+}
+.card-text {
+    color: #7e22ce; /* text-purple-700 */
+}
+.footer {
+    background-color: #ffffff; /* bg-white */
+    color: #6b21a8; /* text-purple-800 */
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+/* Keyframe animations (from Tailwind) */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
 }
