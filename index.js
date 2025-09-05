@@ -5,6 +5,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
+        // Close mobile menu after clicking a link
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.add('hidden');
     });
 });
 
@@ -22,4 +25,10 @@ document.getElementById('copyButton').addEventListener('click', function () {
             this.textContent = 'Copy Address';
         }, 2000);
     });
+});
+
+document.getElementById('menuButton').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('active');
 });
