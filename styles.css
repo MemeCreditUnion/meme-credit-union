@@ -8,21 +8,22 @@ body {
 /* Contract Address Section */
 .contract-section {
     background-color: #6b21a8; /* bg-purple-800 */
-    padding-top: 0.5rem; /* py-2 */
-    padding-bottom: 0.5rem;
+    padding-top: 0.25rem; /* Reduced from 0.5rem */
+    padding-bottom: 0.25rem;
     text-align: center;
     overflow: auto; /* Ensure content is not clipped */
 }
 .contract-container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* px-4 */
-    padding-right: 1rem;
+    padding-left: 0.5rem; /* Reduced from 1rem */
+    padding-right: 0.5rem;
     max-width: 1280px; /* container */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem; /* Space between text and button */
+    gap: 0.25rem; /* Reduced from 0.5rem */
+    min-width: fit-content; /* Ensure tight fit */
 }
 .contract-text {
     font-size: 0.875rem; /* text-sm */
@@ -98,7 +99,7 @@ body {
 .hamburger {
     width: 100%;
     height: 3px;
-    background-color: #6b21a8;
+    background-color: #6b21a8; /* Purple, no change */
     border-radius: 2px;
 }
 .nav-links-mobile {
@@ -182,8 +183,8 @@ body {
 }
 .popcat-gif {
     position: absolute;
-    bottom: 1rem; /* Adjusted to match Pengu */
-    right: 1rem; /* Adjusted to match Pengu */
+    bottom: 1rem;
+    right: 1rem;
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* animate-pulse */
 }
 
