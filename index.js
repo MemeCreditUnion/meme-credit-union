@@ -48,3 +48,4 @@ document.querySelectorAll('.popcat-gif img').forEach(img => {
         img.style.display = 'none';
     });
 });
+
