@@ -32,3 +32,19 @@ document.getElementById('menuButton').addEventListener('click', function () {
     mobileMenu.classList.toggle('hidden');
     mobileMenu.classList.toggle('active');
 });
+
+// Handle GIF load failures
+document.querySelectorAll('.giphy-embed').forEach(iframe => {
+    iframe.addEventListener('error', () => {
+        const parent = iframe.parentElement;
+        parent.querySelector('.gif-fallback').style.display = 'block';
+        iframe.style.display = 'none';
+    });
+});
+document.querySelectorAll('.popcat-gif img').forEach(img => {
+    img.addEventListener('error', () => {
+        const parent = img.parentElement;
+        parent.querySelector('.gif-fallback').style.display = 'block';
+        img.style.display = 'none';
+    });
+});
