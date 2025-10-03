@@ -4,176 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Credit Union</title>
-    <link href="https://fonts.cdnfonts.com/css/comic-sans-ms-2" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </head>
 <body>
-    <!-- Contract Address with Copy Button -->
-    <div class="contract-section">
-        <div class="contract-container">
-            <p class="contract-text">Contract Address: <span id="contractAddress">GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump</span></p>
-            <button id="copyButton" class="copy-button">Copy Address</button>
-        </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="nav">
-        <div class="nav-container">
-            <h1 class="nav-title">
-                <img src="https://i.postimg.cc/0zYPP1Ww/0zu-Vu48-D-400x400.jpg" alt="Meme Credit Union Logo" class="nav-logo">
-                Meme Credit Union
-            </h1>
-            <button id="menuButton" class="menu-button md:hidden">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-links hidden md:flex">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#links">Links</a></li>
-            </ul>
-            
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <h2 class="hero-title">Welcome to Meme Credit Union!</h2>
-            <p class="hero-subtitle">The dankest lending and borrowing platform for meme coins.</p>
-            <p class="hero-text">Lend your Pengu, borrow some Popcat all in one meme tastic place!</p>
-            <a href="#features" class="hero-button">Get Meme'd Up</a>
-        </div>
-        <!-- Meme Background Elements -->
-        <div class="hero-background">
-            <div class="pengu-gif-container">
-                <iframe src="https://giphy.com/embed/cwI67zQ9OqnIgSTMdV" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <img src="https://i.ibb.co/d4rSjXY9/mcucoin.jpg" alt="Meme Credit Union Logo" class="logo">
+                <div class="header-text">
+                    <h1>Meme Credit Union</h1>
+                    <p>Powered by $MCU</p>
+                </div>
             </div>
-            <div class="popcat-gif" data-postid="19312070" data-share-method="host" data-aspect-ratio="1" data-width="100px">
-                <a href="https://tenor.com/view/pop-cat-gif-19312070">Pop Cat Sticker</a>
+            <div class="header-right">
+                <a href="https://x.com/MemeCreditUnion" target="_blank" class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="#6B46C1">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://pump.fun/coin/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="icon-button">
+                    <img src="https://i.ibb.co/4ZJvvDLZ/Pump-fun-logo.png" alt="Pump" class="icon pump-icon">
+                </a>
+                <a href="https://t.me/MemeCreditUnion" target="_blank" class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="#6B46C1">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="hero-container">
-            <h2 class="section-title">About Us</h2>
-            <p class="section-text">
-                Meme Credit Union is the ultimate platform for meme enthusiasts to lend and borrow their favorite meme coins. 
-                Whether you're HODLing or looking to leverage, we've got the tools to make your portfolio go to the moon!
-            </p>
-            <div class="grid about-grid">
-                <div class="card">
-                    <h3 class="card-title">Meme Powered</h3>
-                    <p class="card-text">Backed by the power of internet culture and blockchain tech.</p>
+    <!-- Product Section -->
+    <section class="products">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Box 1 -->
+                <div class="product-box">
+                    <img src="https://i.ibb.co/v6LPM37p/mcuperps.jpg" alt="Perps" class="product-image">
+                    <div class="product-text">
+                        <h3>Dex</h3>
+                        <p>Trade up to 100x Leverage on the MCU Dex</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="card-title">Secure & Fun</h3>
-                    <p class="card-text">Top-notch security with a side of laughs.</p>
+                <!-- Product Box 2 -->
+                <div class="product-box">
+                    <img src="https://i.ibb.co/7NK5j6p8/stakemcuu.jpg" alt="Staking" class="product-image">
+                    <div class="product-text">
+                        <h3>Staking</h3>
+                        <p>Stake your $mcuSOL</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="card-title">Community Driven</h3>
-                    <p class="card-text">Join the meme army and shape the future.</p>
+                <!-- Product Box 3 -->
+                <div class="product-box">
+                    <img src="https://i.ibb.co/XrBcDzfv/flywheelmcu.jpg" alt="Flywheels Analytics" class="product-image">
+                    <div class="product-text">
+                        <h3>Flywheels Analytics</h3>
+                        <p>Buybacks and Liquidity Pools</p>
+                    </div>
+                </div>
+                <!-- Product Box 4 -->
+                <div class="product-box">
+                    <img src="https://i.ibb.co/pT8DvHz/mculendi.jpg" alt="Lending/Borrow" class="product-image">
+                    <div class="product-text">
+                        <h3>Lending/Borrow</h3>
+                        <p>Lend and Borrow with Meme Credit Union</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="section">
-        <div class="hero-container">
-            <h2 class="section-title">Features</h2>
-            <div class="grid features-grid">
-                <div class="card">
-                    <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Lending Icon" class="card-image">
-                    <h3 class="card-title">Lending</h3>
-                    <p class="card-text">Earn interest on your meme coins by lending them out.</p>
-                </div>
-                <div class="card">
-                    <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Borrowing Icon" class="card-image">
-                    <h3 class="card-title">Borrowing</h3>
-                    <p class="card-text">Borrow meme coins with competitive rates.</p>
-                </div>
-                <div class="card">
-                    <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Security Icon" class="card-image">
-                    <h3 class="card-title">Security</h3>
-                    <p class="card-text">Multi-signature wallets and audits for peace of mind.</p>
-                </div>
-                <div class="card">
-                    <img src="https://i.postimg.cc/BXrN2XTd/63793ca7-1585-42aa-8bc3-0c62709305d9.png" alt="Analytics Icon" class="card-image">
-                    <h3 class="card-title">Analytics</h3>
-                    <p class="card-text">Track your memes with real-time dashboards.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="section">
-        <div class="hero-container">
-            <h2 class="section-title">How It Works</h2>
-            <ol class="list">
-                <li>Sign up with your wallet easy peasy!</li>
-                <li>Deposit your meme coins into the union.</li>
-                <li>Choose to lend or borrow based on your vibe.</li>
-                <li>Watch your portfolio grow with interest or leverage.</li>
-                <li>Withdraw anytime, no strings attached (except blockchain fees, lol).</li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- Links Section -->
-    <section id="links" class="section">
-        <div class="hero-container">
-            <h2 class="section-title">Our Links</h2>
-            <p class="section-text">
-                Join our meme tastic community and snipe meme tokens faster! Follow us and trade $MCU on top DEXes with smart money insights.
-            </p>
-            <div class="grid links-grid">
-                <!-- X -->
-                <a href="https://x.com/memecreditunion" target="_blank" class="card" onclick="console.log('Clicked X link')">
-                    <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="Follow us on X" class="card-image w-8 h-8 mr-2">
-                    <span>Follow us on X</span>
-                </a>
-                <!-- Telegram -->
-                <a href="https://t.me/memecreditunion" target="_blank" class="card" onclick="console.log('Clicked Telegram link')">
-                    <img src="https://telegram.org/img/t_logo.svg" alt="Join our Telegram" class="card-image w-8 h-8 mr-2">
-                    <span>Join our Telegram</span>
-                </a>
-                <!-- GMGN -->
-                <a href="https://gmgn.ai/sol/token/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="card" onclick="console.log('Clicked GMGN link')">
-                    <img src="https://i.postimg.cc/9DDwpppM/gmgn.png" alt="Trade on GMGN" class="card-image w-8 h-8 mr-2">
-                    <span>Trade on GMGN</span>
-                </a>
-                <!-- Jupiter -->
-                <a href="https://jup.ag/tokens/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="card" onclick="console.log('Clicked Jupiter link')">
-                    <img src="https://jup.ag/favicon.ico" alt="Trade on Jupiter" class="card-image w-8 h-8 mr-2">
-                    <span>Trade on Jupiter</span>
-                </a>
-                <!-- Pump.fun -->
-                <a href="https://pump.fun/coin/GeHaZrjKgd5MeFvXxb2GsGFtdwqfbG9K6EjGDoA6pump" target="_blank" class="card" onclick="console.log('Clicked Pump.fun link')">
-                    <img src="https://i.postimg.cc/WFV1Z6zh/Pump-fun-logo.png" alt="Trade on Pump.fun" class="card-image w-8 h-8 mr-2">
-                    <span>Trade on Pump.fun</span>
-                </a>
-                <!-- DexScreener -->
-                <a href="https://dexscreener.com/solana/5bfaeaj3bx1ezzxkxinjqma5cashwgufknfyryoxpbez" target="_blank" class="card" onclick="console.log('Clicked DexScreener link')">
-                    <img src="https://dexscreener.com/favicon.ico" alt="Trade on DexScreener" class="card-image w-8 h-8 mr-2">
-                    <span>Trade on DexScreener</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 Meme Credit Union. All rights reserved.</p>
-    </footer>
-
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
