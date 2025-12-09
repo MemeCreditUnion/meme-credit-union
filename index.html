@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Credit Union</title>
+    
+    <style>
+        /* CSS styles are embedded here in the original code. 
+           Please see the CSS section below for the complete stylesheet. */
+        /* [ ... CSS content will go here ... ] */
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-top-bar">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/Xf9YqQh1/32-A6-E672-0-F20-4-B80-8572-BEB607-F369-E5.png" 
+                     alt="Meme Credit Union Logo" 
+                     onclick="renderPage('home')" style="cursor: pointer;">
+            </div>
+
+            <div class="header-actions">
+                <button class="wallet-connect-btn" id="connectWallet">
+                    Login
+                </button>
+                
+                <a href="https://twitter.com/MemeCreditUnion" target="_blank" class="social-link" title="Follow us on X">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.901 1.153h3.684l-8.687 9.873L24 22.846h-6.177l-6.736-8.23-8.156 8.23H.731l9.165-10.42L0 1.153h6.427l5.352 6.574L18.901 1.153Zm-1.547 2.015-1.503-1.464H17.78l-5.776 7.152-1.547 1.954-4.225-5.26-1.547-1.933H3.61l5.228 6.516 1.487 1.879 4.225 5.26h2.176l-5.776-7.152-1.547-1.954L18.354 3.168Z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://t.me/MemeCreditUnion" target="_blank" class="social-link" title="Join our Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.384 5.701a.63.63 0 0 0-.847-.074L3.635 12.247a.64.64 0 0 0 .151 1.157l3.636 1.144 9.17-5.908c.114-.078.257-.073.364.013.107.086.13.23.056.347l-7.91 7.224-1.288 3.513a.625.625 0 0 0 .546.853.613.613 0 0 0 .193-.03l3.83-1.42 5.09-3.958 4.225 3.064a.63.63 0 0 0 1.05-.594l-2.062-13.623c-.097-.643-.564-.783-1.076-.66z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-content">
+        </main>
+
+    <nav class="bottom-nav">
+        
+        <div class="nav-item" data-page="lending" onclick="renderPage('lending')">
+            <img src="https://i.ibb.co/FLrvTmMH/IMG-9842.png" 
+                 alt="Lending Icon" 
+                 class="nav-image">
+            <span class="nav-label">Lending</span>
+        </div>
+
+        <div class="nav-item" data-page="dex" onclick="renderPage('dex')">
+            <img src="https://i.ibb.co/VcGx1fnB/F842115-C-3-B5-B-44-C1-BF39-2-CD9-C2464-C18.png" 
+                 alt="DEX Icon" 
+                 class="nav-image">
+            <span class="nav-label">DEX</span>
+        </div>
+
+        <div class="nav-item" data-page="flywheel" onclick="renderPage('flywheel')">
+            <img src="https://i.ibb.co/rffrPDN8/IMG-9841.png" 
+                 alt="Flywheel Icon" 
+                 class="nav-image">
+            <span class="nav-label">Flywheel</span>
+        </div>
+
+        <div class="nav-item" data-page="staking" onclick="renderPage('staking')">
+            <img src="https://i.ibb.co/FkZYpbSz/IMG-9840.png" 
+                 alt="Staking Icon" 
+                 class="nav-image">
+            <span class="nav-label">Staking</span>
+        </div>
+    </nav>
+
+    <script>
+        /* JavaScript content will go here */
+    </script>
+</body>
+</html>
