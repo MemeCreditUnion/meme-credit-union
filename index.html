@@ -446,13 +446,11 @@
     </nav>
 
     <!-- Modal Container for Alerts/Confirmation (Hidden by default) -->
-    <div id="modal-container" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 z-[100] flex items-center justify-center p-4">
+    <div id="modal-container" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 z-[100] flex items-center justify-center p-4" onclick="handleBackdropClick(event)">
         <div id="alert-modal" style="background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); width: 100%; max-width: 380px;">
             <h3 id="modal-title" style="font-size: 1.25em; font-weight: bold; margin-bottom: 10px; color: #333;"></h3>
             <p id="modal-message" style="color: #666; margin-bottom: 20px;"></p>
-            <div style="display: flex; justify-content: flex-end;">
-                <button onclick="hideModal()" class="action-btn" style="background-color: #9945FF; color: white; padding: 8px 15px; font-size: 14px;">Close</button>
-            </div>
+            <!-- Removed the explicit Close button -->
         </div>
     </div>
 
@@ -525,6 +523,16 @@
         /** Hides the custom modal/alert box. */
         window.hideModal = function() {
             document.getElementById('modal-container').classList.add('hidden');
+        }
+        
+        /**
+         * Handles clicking outside the modal content to dismiss it.
+         */
+        window.handleBackdropClick = function(event) {
+            // Only hide the modal if the click target is the outer container itself
+            if (event.target.id === 'modal-container') {
+                hideModal();
+            }
         }
         
         /**
